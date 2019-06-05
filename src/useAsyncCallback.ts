@@ -1,7 +1,7 @@
 ﻿import * as React from 'react';
 
 /**
- * React hook that provides a standard way generate async calls by returning a wrapped callback, and a executing and flag and error result.
+ * React hook that provides a standard way to generate async callbacks by returning a wrapped callback, an executing and flag, and error result created from any raised exceptions.
  * 
  * @param callback Async callback that will be wrapped with the extended functionality and returned.
  * @param deps Dependencies passed to React's useCallback()
