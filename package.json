@@ -18,9 +18,7 @@
     "typescript",
     "react",
     "async",
-    "callback",
-    "inject",
-    "type-safe"
+    "callback"
   ],
   "publishConfig": {
     "access": "public"
