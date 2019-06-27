@@ -10,9 +10,9 @@
  * @param callback Async callback that will be wrapped with the extended functionality and returned.
  * @param deps Dependencies passed to React's useCallback()
  */
-export function useAsyncCallback<T extends (...args: any[]) => Promise<any>>(callback: T, deps: React.DependencyList): [T, boolean, string, boolean] {
+export function useAsyncCallback<T extends (...args: any[]) => Promise<any>>(callback: T, deps: React.DependencyList): [T, boolean, any, boolean] {
     const [isExecuting, setIsExecuting] = React.useState<boolean>(false);
-    const [error, setError] = React.useState<string>('');
+    const [error, setError] = React.useState<any>(undefined);
     const [success, setSuccess] = React.useState<boolean>(false);
 
     const wrappedCallback : T = React.useCallback(async (...argsx: any[]) => {
@@ -22,7 +22,7 @@ export function useAsyncCallback<T extends (...args: any[]) => Promise<any>>(cal
         try {
             let ret = await callback(...argsx);
             setSuccess(true);
-            setError('');
+            setError(undefined);
             setIsExecuting(false);
             return ret;
         } catch (e) {
