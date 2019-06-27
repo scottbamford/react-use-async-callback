@@ -1,6 +1,6 @@
 {
   "name": "react-use-async-callback",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "React hook that provides a standard way generate async calls by returning a wrapped callback, a executing and success flags and any error result.",
   "main": "dist/lib/commonjs/index.js",
   "module": "dist/lib/esm/index.js",
