@@ -70,7 +70,7 @@ const [save, isSaving] = useAsyncCallback(async () : Promise<any> => {
  * @param callback Async callback that will be wrapped with the extended functionality and returned.
  * @param deps Dependencies passed to React's useCallback()
  */
-function useAsyncCallback<T extends (...args: any[]) => Promise<any>>(callback: T, deps: React.DependencyList): [T, boolean, string, boolean]
+function useAsyncCallback<T extends (...args: any[]) => Promise<any>>(callback: T, deps: React.DependencyList): [T, boolean, any, boolean]
 ```
 
 ## License
