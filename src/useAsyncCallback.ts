@@ -30,6 +30,9 @@ export function useAsyncCallback<T extends (...args: any[]) => Promise<any>>(cal
         } catch (e) {
             setError(e);
             setIsExecuting(false);
+
+            // Pass on the exception so existing exception handling can handle it.
+            throw e;
         }
     }, [...deps, setIsExecuting, setError]) as T;
 
