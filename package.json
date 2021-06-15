@@ -1,6 +1,6 @@
 {
   "name": "react-use-async-callback",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "React hook that provides a standard way generate async calls by returning a wrapped callback, a executing and success flags and any error result.",
   "main": "dist/lib/commonjs/index.js",
   "module": "dist/lib/esm/index.js",
@@ -32,12 +32,14 @@
     "build": "tsc && tsc -m esnext --outDir ./dist/lib/esm"
   },
   "dependencies": {
-    "react": "^16.8.6",
-    "tslib": "^1.10.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "tslib": ">=1.9.3"
   },
   "devDependencies": {
-    "@types/react": "^16.8.16",
-    "typescript": "3.4.5",
-    "rimraf": "^2.6.3"
+    "@types/react": "^17.0.11",
+    "typescript": "^4.3.2",
+    "rimraf": "^3.0.2"
   }
 }
